@@ -36,7 +36,7 @@ middleDropdown.addEventListener('change', () => {
     // increment the middle change count state
     middleCount++;
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
-    middleEl.style = `background-image: url(./assets/${middleDropdown.value}-middle.png)`
+    middleEl.style = `background-image: url(./assets/${middleDropdown.value}-middle.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
     displayStats();
 });
@@ -44,12 +44,13 @@ middleDropdown.addEventListener('change', () => {
 
 bottomDropdown.addEventListener('change', () => {
     // get the value of the bottom dropdown
-
+    console.log('changing bottom', bottomDropdown.value);
     // increment the bottom change count state
-    
+    bottomCount++;
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    bottomEl.style = `background-image: url(./assets/${bottomDropdown.value}-pants.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
