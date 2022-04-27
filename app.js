@@ -19,12 +19,14 @@ let catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
-
+    console.log('changing head', headDropdown.value);
     // increment the head change count state
-    
-    // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    headCount++;
+    // update the dom for the head (use style.backgroundImage on the headEl div 
+    //instead of trying to set the .src -- it's NOT an img tag!)
+    headEl.style = `background-image: url(./assets/${headDropdown.value}-head.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
